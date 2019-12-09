@@ -1,0 +1,3 @@
+SELECT  PARAMETER C1,
+        VALUE     C2
+ FROM   X$OPTION;

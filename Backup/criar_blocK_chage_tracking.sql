@@ -1,0 +1,1 @@
+ALTER DATABASE BLOCK CHANGE TRACKING USING FILE '/home/oracle/Desktop/Backup/file.bct'

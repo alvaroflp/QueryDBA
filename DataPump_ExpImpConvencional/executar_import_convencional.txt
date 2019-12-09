@@ -1,0 +1,2 @@
+-- Exemplo: 
+imp fromuser=schema touser=schema file='/u01/app/oracle/product/admin/adm/dpdump/schema.dmp'

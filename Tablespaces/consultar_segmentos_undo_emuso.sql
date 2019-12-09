@@ -1,0 +1,1 @@
+select owner, segment_name, tablespace_name, status from dba_rollback_segs order by 3;

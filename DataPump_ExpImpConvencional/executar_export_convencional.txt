@@ -1,0 +1,2 @@
+-- Exemplo:
+exp owner=schema statistics=none file='bd_schema.dmp'

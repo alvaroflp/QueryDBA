@@ -1,0 +1,26 @@
+-- gerar arquivo de script SQL contendo grants de um determinado usuario:
+impdp usuario/senha directory=DATAPUMP_DIR dumpfile=expdp_grants.dmp schemas=teste include=grant sqlfile=script_grants_teste.sql
+
+-- importa dump de um determinado schema, somente tabelas especificas, substituindo dados existentes (funciona no terminal do linux):
+impdp / dumpfile=exp_teste.dmp TABLE_EXISTS_ACTION=REPLACE directory=DATAPUMP_DIR schemas=teste include=TABLE:\"IN \(\'TAB1\', \'TAB2\',\'TAB3\'\)\"
+
+-- importa dump de um determinado schema, remapeando o schema e tablespace:
+impdp / REMAP_SCHEMA=TESTE1:TESTE1 SCHEMAS=TESTE1 REMAP_TABLESPACE=TESTE1_DADOS:TESTE2_DADOS dumpfile=expdp_teste1.dmp DIRECTORY=DATAPUMP_DIR
+
+-- importa dump de uma visao de um determinado schema, remapeando o schema
+impdp / INCLUDE=VIEW:\"=\'VW_X\'\" REMAP_SCHEMA=teste1:teste2 dumpfile=expdp_view_teste1.dmp DIRECTORY=DATAPUMP_DIR
+
+-- importa somente visoes de um determinado dump
+impdp system/xxxxx INCLUDE=VIEW dumpfile=expdp_teste.dmp DIRECTORY=DATAPUMP_DIR
+
+-- importa somente dados de uma tabela
+impdp / tables=TABELA1 CONTENT=DATA_ONLY TABLE_EXISTS_ACTION=TRUNCATE dumpfile=expdp_tabela1.dmp
+ 
+-- importa somente metadados de um schema
+ impdp / SCHEMAS=TESTE1 CONTENT=METADATA_ONLY dumpfile=expdp_TESTE1.dmp
+
+-- gera arquivo de script SQL contendo os metadados previamente exportados em um dump: 
+impdp / dumpfile=ddl_rep.dmp sqlfile=ddl_rep.sql
+
+-- importa um dump full:
+impdp system/xxxx DIRECTORY=DATAPUMP_DIR DUMPFILE=expdp_bd_full.dmp FULL=Y

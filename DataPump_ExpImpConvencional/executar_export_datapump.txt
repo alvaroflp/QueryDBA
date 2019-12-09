@@ -1,0 +1,17 @@
+-- exportar somente 1 tabela de um schema (para executar no terminal do linux):
+expdp / SCHEMAS=SCHEMA INCLUDE=TABLE:\"=\'TABLENAME\'\" dumpfile=expdp_tablename.dmp DIRECTORY=DATAPUMP_DIR
+
+-- exportar tabelas diversas e especificas (para executar no terminal do linux):
+expdp / TABLES=schema.tab1,schema.tab2 dumpfile=expdp_tabelas.dmp DIRECTORY=DIRECTORY=DATAPUMP_DIR
+
+-- export full do BD:
+expdp system/xxxx DUMPFILE=expdp_bd_full.dmp FULL=Y
+
+-- exportar dados de um schema para versao anterior do oracle:
+expdp / DIRECTORY=DATAPUMP_DIR DUMPFILE=expdp_versao_anterior.dmp SCHEMAS=SOE VERSION=10.2
+
+-- exporta somente metadados do BD (criando repositorio de DDL de objetos):
+expdp / content=metadata_only full=y dumpfile=ddl_rep.dmp
+
+-- exportar todas as tabelas de um schema que tenham nome comecando com 'XYZ' (funciona somente no terminal do linux):
+expdp / directory=DATAPUMP_DIR dumpfile=expdp_tabelas_xyz.dmp SCHEMAS=TESTE INCLUDE=TABLE:\"LIKE \'XYZ%\'\"

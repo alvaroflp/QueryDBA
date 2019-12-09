@@ -1,0 +1,5 @@
+CROSSCHECK backup;
+
+DELETE EXPIRED backup;
+
+DELETE OBSOLETE;
