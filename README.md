@@ -1,8 +1,6 @@
-![QueryDBA](https://github.com/alvaroflp/QueryDBA/tree/master/img/images.png)
+
  
 <p align="center">
-  <a href="https://github.com/alvaroflp/QueryDBA/tree/master/img/images.png">
-
   </a>  
 </p><br>
 <p align="center">
