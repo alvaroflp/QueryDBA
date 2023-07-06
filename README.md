@@ -1,6 +1,19 @@
-Este repositório contém um conjunto de queries voltadas para o banco de dados Oracle, abordando diferentes áreas relacionadas à administração e consultas do banco de dados. As queries fornecidas neste repositório visam auxiliar os DBAs (Administradores de Banco de Dados) na execução de tarefas e obtenção de informações úteis sobre o ambiente Oracle.
+<p align="center">
+  <a href="https://github.com/alvaroflp/QueryDBA/tree/master/img/oracle.png">
+    <img alt="Horse" height="150" src="https://github.com/alvaroflp/QueryDBA/tree/master/img/oracle.png">
+  </a>  
+</p><br>
+<p align="center">
+  Este repositório contém um conjunto de queries voltadas para o banco de dados Oracle, abordando diferentes áreas relacionadas à administração e consultas do banco de dados. As queries fornecidas neste repositório visam auxiliar os DBAs (Administradores de Banco de Dados) na execução de tarefas e obtenção de informações úteis sobre o ambiente Oracle.
 
-As queries abordam diversas áreas importantes da administração de banco de dados Oracle, permitindo aos DBAs obter insights valiosos e tomar decisões informadas. A seguir, são fornecidos detalhes sobre as principais áreas abrangidas por essas queries:
+  As queries abordam diversas áreas importantes da administração de banco de dados Oracle, permitindo aos DBAs obter insights valiosos e tomar decisões informadas. A seguir, são fornecidos detalhes sobre as principais áreas abrangidas por essas queries:
+</p><br>
+<p align="center">
+</p>
+
+
+
+
 
 # APEX (Oracle Application Express)
 As queries relacionadas ao APEX permitem obter informações sobre as aplicações desenvolvidas utilizando o Oracle Application Express. Isso inclui detalhes sobre os aplicativos, páginas, regiões, itens, relatórios e outras entidades do APEX.
